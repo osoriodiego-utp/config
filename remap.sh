@@ -7,9 +7,6 @@ echo "Show graphic options: xev"
 xmodmap -e "keycode  49 = grave asciitilde bar degree grave notsign"
 echo "Tecla \` configurada (AltGr + \`)"
 
-xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-echo "Tecla Escape => Caps_Lock"
-
 xmodmap -e "keycode 59 = comma semicolon comma semicolon less"
 echo "Tecla < configurada (AltGr + <)"
 
@@ -18,6 +15,9 @@ echo "Tecla > configurada (AltGr + >)"
 
 xmodmap -e "keycode 61 = minus underscore minus underscore slash"
 echo "Tecla / configurada (AltGr + ?)"
+
+setxkbmap -option caps:swapescape
+echo "Tecla Esc swap whit Caps_Lock"
 
 xmodmap -e "keycode 105 = Menu NoSymbol Menu"
 echo "Tecla [=] configurada (AltGr)"
