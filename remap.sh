@@ -3,8 +3,12 @@
 echo "Show key list: xmod -pke"
 echo "Show graphic options: xev"
 
+
 xmodmap -e "keycode  49 = grave asciitilde bar degree grave notsign"
 echo "Tecla \` configurada (AltGr + \`)"
+
+xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+echo "Tecla Escape => Caps_Lock"
 
 xmodmap -e "keycode 59 = comma semicolon comma semicolon less"
 echo "Tecla < configurada (AltGr + <)"
