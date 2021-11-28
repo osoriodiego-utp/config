@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim' "no tested by me
 "ide js
   Plug 'yuezk/vim-js'
-  Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
+  "Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' } "need python
 "editor
   Plug 'jiangmiao/auto-pairs'
   Plug 'alvan/vim-closetag'
@@ -20,10 +20,12 @@ call plug#begin('~/.vim/plugged')
   "Plug 'sheerun/vim-polyglot' need python
   Plug 'yggdroot/indentline'
 "autocomplete
-  "Plug 'sirver/ultisnips' need python
+  "Plug 'sirver/ultisnips' "need python
+  " Plug 'valloric/youcompleteme' "need python
 "others
   Plug 'tpope/vim-surround'
   Plug 'mhinz/vim-signify' "no tested by me
+  Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 "Theme config
@@ -44,7 +46,7 @@ set guifont=Fira_Code_Retina:h10
   set number "line number
   set cursorline
   set relativenumber
-  set spell
+  "set spell
   set laststatus=2
   set sw=2
   set backspace=2
@@ -57,13 +59,18 @@ set guifont=Fira_Code_Retina:h10
   let mapleader = " "
   
   nmap <Leader>nt :NERDTreeFind<CR>
-  let NERDTreeQuitOnOpen=1
+  "let NERDTreeQuitOnOpen=1
   
   nmap <Leader>cc :NERDCommenterToggle<CR>
   let g:NERDSpaceDelims = 1
   
   let g:closetag_shortcut = '>'
   let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+  "Floaterm
+  let g:floaterm_keymap_toggle= '<C-P>'
+  let g:floaterm_width = 0.8 "size of terminal % screen
+  let g:floaterm_height = 0.8
   
   "move_line_up
   nnoremap <S-Up> :m-2<CR>
